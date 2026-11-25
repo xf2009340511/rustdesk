@@ -1,0 +1,10 @@
+name: QN Reuse Test
+on:
+  workflow_dispatch:
+jobs:
+  call-build:
+    uses: ./.github/workflows/flutter-build.yml
+    secrets: inherit
+    with:
+      upload-artifact: false
+      upload-tag: qn
